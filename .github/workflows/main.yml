@@ -1,0 +1,16 @@
+name: CI/CD Workflow
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ustawienie kodu2
+        uses: actions/checkout@v3
+
+      - name: Wyświetlenie wiadomości
+        run: echo "Zmiany wypchnięte na gałąź master!"
