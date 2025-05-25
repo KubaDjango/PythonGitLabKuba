@@ -1,9 +1,10 @@
 from django.urls import path
-from .views import hello_world, hello_name, add , div, table, update_post, post_list, create_post
+from .views import hello_world, hello_name, add , div, table, update_post, post_list, create_post, get_variable_view
 
 #create_post, delete_post, post_list
 
 urlpatterns = [
+    path('project/', get_variable_view),
     path('hello/', hello_world),
     path('hello/<str:name>/', hello_name),
     path('add/<int:a>/<int:b>/', add),

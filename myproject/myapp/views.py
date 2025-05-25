@@ -4,16 +4,33 @@ from gc import get_objects
 
 from django.template.defaultfilters import title
 
-from .forms import LinearEquationForm, PostForm, ImageForm
+from .forms import LinearEquationForm, PostForm, ImageForm, MyForm
 
 from django.http import HttpResponse, JsonResponse
 
 from .models import Post, Image
 
 
-# Create your views here.
+# View showing my form
+def get_variable_view(request):
+    if request.method == 'POST':
+        form = MyForm(request.POST)
+        if form.is_valid():
+            name_value = form.cleaned_data['name'] # getting value name
+            return HttpResponse(f'Received value: {name_value}')
+    else:
+        form = MyForm()
+
+    return render(request, 'form_template.html', {'form':form})
 
 
+
+
+
+
+
+
+############################
 def hello_world(request):
     #return HttpResponse('Hello World')
     return render(request,'hello_world.html')
