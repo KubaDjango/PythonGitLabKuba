@@ -1,5 +1,45 @@
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">GO</button>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS (CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>GitLab Project Hierarchy Creation</title>
+
+    <style>
+        body {
+            background-color: #f0f8ff; /* Jasnoniebieskie tło */
+            color: #333; /* Kolor tekstu dla lepszej czytelności */
+        }
+    </style>
+</head>
+<body class="d-flex flex-column justify-content-center align-items-center vh-100">
+
+    <!-- Główna zawartość strony -->
+    <div class="text-center">
+        <h1 class="fw-bold fs-2 mb-4">GitLab Project Hierarchy Creation</h1>
+
+        <p class="fs-6">
+            On this page, you will automatically create the GitLab skeleton of your project.
+        </p>
+        <p class="fs-6">
+            Define the name of your project and its GitLab location.
+
+        </p>
+        <!-- Dodatkowe wolne akapity -->
+        <p class="fs-6 mt-5 mb-5">&nbsp;</p>
+        <!-- Formularz -->
+        <form method="post" class="mt-4">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-success">CREATE HIERARCHY</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS (CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

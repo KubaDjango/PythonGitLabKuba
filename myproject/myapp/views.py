@@ -8,7 +8,7 @@ from django.template.defaultfilters import title
 from .forms import  MyForm
 
 from django.http import HttpResponse, JsonResponse
-
+from django.utils.html import format_html
 
 
 
@@ -22,7 +22,7 @@ def get_variable_view(request):
             # writing location value in the session
             request.session['location_value']=location_value
 
-            # Run create gitlab hierarchy function
+#           Run create gitlab hierarchy function
             try:
                 create_gitlab_epic_hierarchy(group_path= location_value, TopLevel=name_value)
                 return HttpResponse(f'PROJECT NAME: {name_value}\n, GITLAB GROUP LOCATION: {location_value}')
