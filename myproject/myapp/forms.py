@@ -7,8 +7,8 @@ from .models import Post, Image
 
 
 class MyForm(forms.Form):
-    name = forms.CharField(label='Name of your project',max_length= 100)
-
+    name = forms.CharField(label='NAME OF YOUR PROJECT',max_length= 100)
+    location = forms.CharField(label='GITLAB GROUP LOCATION', max_length=100, initial='kuba474650')
 
 
 
