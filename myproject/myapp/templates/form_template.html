@@ -20,17 +20,20 @@
 
     <!-- Główna zawartość strony -->
     <div class="text-center">
-        <h1 class="fw-bold fs-2 mb-4">GitLab Project Hierarchy Creation</h1>
+        <h1 class="text-primary fw-bold fs-2 mb-4">GitLab Project Hierarchy Creation</h1>
 
-        <p class="fs-6">
-            On this page, you will automatically create the GitLab skeleton of your project.
+        <p class="text-primary fs-6">
+            On this page, you can automatically generate a GitLab project skeleton,
         </p>
-        <p class="fs-6">
-            Define the name of your project and its GitLab location.
-
+        <p class="text-primary fs-6">
+            including standard epics and their child elements, where you can directly create issues.
         </p>
         <!-- Dodatkowe wolne akapity -->
         <p class="fs-6 mt-5 mb-5">&nbsp;</p>
+        <p  class="fw-bold text-primary fs-6">
+            Simply define your project name and GitLab location:
+
+
         <!-- Formularz -->
         <form method="post" class="mt-4">
             {% csrf_token %}
