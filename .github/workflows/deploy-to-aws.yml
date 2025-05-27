@@ -18,8 +18,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
       - name: Run test
-        run: |
-          python manage.py test
+        run: python manage.py test
+        env:
+          DJANGO_SETTINGS_MODULE: myproject.settings
+          PYTHONPATH: ${{ github.workspace }}
       - name: Configure AWS credentials
         if: success()
         uses: aws-actions/configure-aws-credentials@v2
