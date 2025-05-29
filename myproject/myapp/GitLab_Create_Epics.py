@@ -6,20 +6,20 @@ import time
 import os
 
 import urllib3
-from views import get_variable_view
+
 #connect to gitlab
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-TOKEN= "glpat-ewHR2L-evv3MCi3XyJZ6"
-
+#TOKEN= "glpat-ewHR2L-evv3MCi3XyJZ6"
+TOKEN= "glpat-AXK_YZpDUWDY2g-t3FQw"
 
 # connection with GitLab
 #TOKEN = 'TWÓJ_TOKEN'
 gl= gitlab.Gitlab('https://gitlab.com/',private_token=TOKEN, ssl_verify=False)
 
 #get the group
-GROUP_PATH = 'kuba474650'
+GROUP_PATH = 'analizy.badawcze-group'
 
 group = gl.groups.get(GROUP_PATH)
 
