@@ -1,1 +1,1 @@
-web: gunicorn myproject.myproject.wsgi --bind 0.0.0.0:8000
+web: PYTHONPATH=myproject gunicorn myproject.wsgi --bind 0.0.0.0:8000
