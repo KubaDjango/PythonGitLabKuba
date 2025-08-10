@@ -14,7 +14,7 @@ import urllib3
 def create_gitlab_epic_hierarchy(group_path, TopLevel):
     urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-    TOKEN = "glpat-AXK_YZpDUWDY2g-t3FQw"
+    TOKEN = "glpat-Ge4Ck5oL-Kj3K-Iv4s5MhG86MQp1OmgzYXkyCw.01.120laj96t"
 
     # connection with GitLab
     # TOKEN = 'TWÓJ_TOKEN'

@@ -13,6 +13,7 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 TOKEN= "glpat-ewHR2L-evv3MCi3XyJZ6"
 
+#GROUP_PATH = 'kuba474650'
 GROUP_PATH = 'kuba474650'
 
 # Autoryzacja
