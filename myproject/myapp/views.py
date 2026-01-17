@@ -25,7 +25,8 @@ def get_variable_view(request):
 #           Run create gitlab hierarchy function
             try:
                 create_gitlab_epic_hierarchy(group_path= location_value, TopLevel=name_value)
-                gitlab_url = "https://gitlab.com/groups/analizy.badawcze-group/-/epics?state=opened&page=1&sort=start_date_desc&label_name[]=Initiative+Level::Top+Level"
+                #gitlab_url = "https://gitlab.com/groups/analizy.badawcze-group/-/epics?state=opened&page=1&sort=start_date_desc&label_name[]=Initiative+Level::Top+Level"
+                gitlab_url = "https://gitlab.com/groups/kuba9223326/-/epics?state=opened&page=1&sort=start_date_desc&label_name%5B%5D=Initiative%20Level%3A%3ATop%20Level"
                 return HttpResponse(
                     f"PROJECT NAME: {name_value}<br>"
                     f"GITLAB GROUP LOCATION: {location_value}<br>"

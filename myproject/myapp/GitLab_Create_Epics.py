@@ -12,18 +12,24 @@ import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 #TOKEN= "glpat-ewHR2L-evv3MCi3XyJZ6"
-TOKEN= "glpat-AXK_YZpDUWDY2g-t3FQw"
+#TOKEN= "glpat-AXK_YZpDUWDY2g-t3FQw"
 
+#Token for analizy badawcze Jan 15 2026
+#TOKEN= "glpat-rfQjNVf_r9Ie5o1tqJgHIm86MQp1OmgzYXkyCw.01.121usgre3"
+
+#Token Kuba
+TOKEN= "glpat-rfQjNVf_r9Ie5o1tqJgHIm86MQp1OmgzYXkyCw.01.121usgre3"
 # connection with GitLab
 #TOKEN = 'TWÓJ_TOKEN'
 gl= gitlab.Gitlab('https://gitlab.com/',private_token=TOKEN, ssl_verify=False)
 
 #get the group
-GROUP_PATH = 'analizy.badawcze-group'
+#GROUP_PATH = 'analizy.badawcze-group'
+GROUP_PATH = 'kuba9223326'
 
 group = gl.groups.get(GROUP_PATH)
 
-TopLevel =  "KHMA"
+TopLevel =  "KHMA2"
 
 ################################### MAIN EPIC
 main_epic = group.epics.create({
