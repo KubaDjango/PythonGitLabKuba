@@ -7,7 +7,7 @@ import time
 import os
 
 import urllib3
-from data import TOKEN
+#from myapp.data import TOKEN
 # connect to gitlab
 
 
@@ -17,7 +17,7 @@ def create_gitlab_epic_hierarchy(group_path, TopLevel):
 
 
     # connection with GitLab
-    # TOKEN = 'TWÓJ_TOKEN'
+    TOKEN = "glpat-rfQjNVf_r9Ie5o1tqJgHIm86MQp1OmgzYXkyCw.01.121usgre3"
     gl = gitlab.Gitlab('https://gitlab.com/', private_token=TOKEN, ssl_verify=False)
 
     # get the group
