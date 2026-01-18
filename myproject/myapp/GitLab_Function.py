@@ -10,6 +10,9 @@ import urllib3
 #from myapp.data import TOKEN
 # connect to gitlab
 
+import os
+
+TOKEN = os.getenv("GITLAB_TOKEN")
 
 def create_gitlab_epic_hierarchy(group_path, TopLevel):
     urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
@@ -17,7 +20,7 @@ def create_gitlab_epic_hierarchy(group_path, TopLevel):
 
 
     # connection with GitLab
-    TOKEN = "glpat-rfQjNVf_r9Ie5o1tqJgHIm86MQp1OmgzYXkyCw.01.121usgre3"
+    #TOKEN = "glpat-rfQjNVf_r9Ie5o1tqJgHIm86MQp1OmgzYXkyCw.01.121usgre3"
     gl = gitlab.Gitlab('https://gitlab.com/', private_token=TOKEN, ssl_verify=False)
 
     # get the group
