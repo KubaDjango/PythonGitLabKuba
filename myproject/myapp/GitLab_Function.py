@@ -14,6 +14,9 @@ import os
 
 TOKEN = os.getenv("GITLAB_TOKEN")
 
+#in terminal you need to add during each session set GITLAB_TOKEN="XXXXXX"
+
+
 def create_gitlab_epic_hierarchy(group_path, TopLevel):
     urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
